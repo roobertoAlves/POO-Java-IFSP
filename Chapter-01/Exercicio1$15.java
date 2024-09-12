@@ -12,9 +12,10 @@ public class Exercicio1$15
         double _width;
         double _height;
 
+        //#endregion
+        
         System.out.print( "Digite o comprimento da altura do retângulo(em decimal): " );
         _height = Double.parseDouble( scanner.nextLine() );
-        
-        //#endregion
+    
     }    
 }
