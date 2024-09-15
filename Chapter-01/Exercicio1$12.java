@@ -19,6 +19,6 @@ public class Exercicio1$12
         System.out.printf("%.2f\n", _number);
         System.out.printf("%.3f\n", _number);
 
-        
+        scanner.close();
     }
 }

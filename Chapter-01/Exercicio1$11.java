@@ -11,6 +11,8 @@ public class Exercicio1$11
         int _sDiagonal;
         int _area;
 
+        //#endregion
+        
         System.out.print( "Digite o valor do comprimento da diagonal maior do losango: " );
         _bDiagonal = Integer.parseInt( scanner.nextLine() );
         
@@ -24,6 +26,5 @@ public class Exercicio1$11
             
         scanner.close();
 
-        //#endregion
     }    
 }
