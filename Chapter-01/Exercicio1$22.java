@@ -18,7 +18,7 @@ public class Exercicio1$22
 
         _totalPrice = _price * 0.91;
 
-        System.out.printf( "Preço de venda com 9% de desconto: %.2f ", _totalPrice);
+        System.out.printf( "Preco de venda com 9%% de desconto: %.2f ", _totalPrice);
 
         scanner.close();
     }    
