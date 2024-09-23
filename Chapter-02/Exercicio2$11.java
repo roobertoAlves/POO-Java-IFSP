@@ -29,11 +29,20 @@ public class Exercicio2$11
             {
                 System.out.printf( "Triangulo RETANGULO" );
             }
-            else if(_alfaAn == 90 && _betaAn != 0 && _gamaAn != 0|| _betaAn == 90 && _alfaAn != 0 && _gamaAn != 0|| _gamaAn == 90 && _betaAn != 0 && _alfaAn != 0)
+            else if(_alfaAn > 90 && _betaAn != 0 && _gamaAn != 0 || _betaAn > 90 && _alfaAn != 0 && _gamaAn != 0 || _gamaAn > 90 && _alfaAn != 0 && _betaAn != 0)
+            {
+                System.out.printf( "Triangulo OBTUSANGULO" );
+            }
+            else
+            {
+                System.out.printf( "Triangulo ACUTANGULO" );
+            }
         }
         else
         {
             System.out.printf( "As medidas fornecidas dos angulos nao representam um triangulo valido!" );
         }
+
+        scanner.close();
     }    
 }
