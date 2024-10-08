@@ -6,52 +6,53 @@ public class Exercicio3$21
     {
         //#region Variaveis
 
-        Scanner scanner = new Scanner( System.in );
-
+        Scanner scanner = new Scanner(System.in);
         int _height;
 
         //#endregion
 
-        System.out.print( "Digite a altura do triângulo: " );
-        _height = Integer.parseInt( scanner.nextLine() );
+        System.out.print("Digite a altura do triangulo: ");
+        _height = Integer.parseInt(scanner.nextLine());
 
-        if(_height >= 0)
+        scanner.close();
+
+        if (_height == 0)
         {
-            for( int i = 1; i <= _height; i++ )
+            return; 
+        }
+
+        if (_height > 0)
+        {
+            // Triângulo normal (de base para cima)
+            for (int i = 1; i <= _height; i++)
             {
-                // Espaços
-                for(int j = 5; j > i; j--)
+                for (int j = 1; j <= _height - i; j++)
                 {
                     System.out.print(" ");
-                }  
- 
-                // Asteriscos
- 
-                for( int k = 1; k <= i; k++)
+                }
+                for (int k = 1; k <= (2 * i - 1); k++)
                 {
                     System.out.print("*");
                 }
-
                 System.out.println();
             }
         }
         else
         {
-            for( int x = 1; x <= (_height * -1); x++ )
+            // Triângulo invertido (de cabeça para baixo)
+            _height = -_height;
+            for (int i = _height; i >= 1; i--)
             {
-                for( int z = 1; z < x; z++)
+                for (int j = 1; j <= _height - i; j++)
                 {
                     System.out.print(" ");
                 }
-                for( int y = 5; y >= x; y--)
+                for (int k = 1; k <= (2 * i - 1); k++)
                 {
                     System.out.print("*");
                 }
- 
-             System.out.println();
-         }
+                System.out.println();
+            }
         }
-        
-        scanner.close();
-    }    
+    }
 }
