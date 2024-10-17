@@ -18,7 +18,7 @@ public class Exercicio4$2
         for( int i = 0; i < _userInputArray.length; i++ )
         {
             System.out.printf( "Digite o valor para o array[%d]: ",  i );
-            _userInputArray[i] = Integer.parseInt( scanner.nextLine() );
+            _userInputArray[ i ] = Integer.parseInt( scanner.nextLine() );
         }
 
         System.out.print("Digite o valor a ser multiplicado: ");
@@ -31,7 +31,7 @@ public class Exercicio4$2
 
         for( int i = 0; i < _resultArray.length; i++ )
         {
-            System.out.printf( "arrayMult[%d] = %d\n", i, _resultArray[i] );
+            System.out.printf( "arrayMult[%d] = %d\n", i, _resultArray[ i ] );
         }
 
         scanner.close();
