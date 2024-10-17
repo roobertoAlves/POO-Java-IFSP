@@ -46,7 +46,6 @@ public class Exercicio4$5
             System.out.printf( "\nO array nao contem o valor %d.", _valueToFind );
         }
 
-
         scanner.close();
  
     }    
