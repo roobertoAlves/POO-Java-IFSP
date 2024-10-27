@@ -30,21 +30,21 @@ del *.class
 cd..
 
 cd exemplo-mouse
-del *.class
+rd /s /q bin
 cd..
 
 cd exemplo-teclado
-del *.class
+rd /s /q bin
 cd..
 
 cd modelo-exercicios-criativos
-del *.class
+rd /s /q bin
 cd..
 
 cd projeto-bolinha
-del *.class
+rd /s /q bin
 cd..
 
 cd projeto-pong
-del *.class
+rd /s /q bin
 cd..
