@@ -1,4 +1,4 @@
-import br.com.davidbuzatto.jsge.core.Engine;
+import br.com.davidbuzatto.jsge.core.engine.EngineFrame;
 import java.awt.Color;
 
 public class Bolinha {
@@ -20,7 +20,7 @@ public class Bolinha {
         this.vy = vy;
     }
 
-    public void desenhar( Engine engine ) {
+    public void desenhar( EngineFrame engine ) {
         engine.fillCircle( x, y, raio, cor );
     }
 

@@ -1,4 +1,4 @@
-import br.com.davidbuzatto.jsge.core.Engine;
+import br.com.davidbuzatto.jsge.core.engine.EngineFrame;
 
 /**
  * Simulação da bolinha.
@@ -6,15 +6,13 @@ import br.com.davidbuzatto.jsge.core.Engine;
  * @author Prof. Dr. David Buzatto
  * @copyright Copyright (c) 2024
  */
-public class Main extends Engine {
+public class Main extends EngineFrame {
 
     private Bolinha bolinha;
     private double offsetX;
     private double offsetY;
     private int xMouseAnterior;
     private int yMouseAnterior;
-
-    private double delta;
 
     private static final int GRAVIDADE = 100;
 
@@ -28,9 +26,7 @@ public class Main extends Engine {
     }
 
     @Override
-    public void update() {
-
-        delta = getFrameTime();
+    public void update( double delta ) {
 
         if ( isMouseButtonPressed( MOUSE_BUTTON_LEFT ) ) {
             double cat1 = getMouseX() - bolinha.getX();

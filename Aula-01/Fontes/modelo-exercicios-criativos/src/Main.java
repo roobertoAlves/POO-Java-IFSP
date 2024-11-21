@@ -1,4 +1,4 @@
-import br.com.davidbuzatto.jsge.core.Engine;
+import br.com.davidbuzatto.jsge.core.engine.EngineFrame;
 
 /**
  * Modelo para desenvolvimento de exercícios criativos em Java 2D.
@@ -6,7 +6,7 @@ import br.com.davidbuzatto.jsge.core.Engine;
  * @author Prof. Dr. David Buzatto
  * @copyright Copyright (c) 2024
  */
-public class Main extends Engine {
+public class Main extends EngineFrame {
 
     // declaração de variáveis
 
@@ -33,9 +33,11 @@ public class Main extends Engine {
 
     /**
      * Atualiza os objetos/contextos/variáveis do jogo ou simulação.
+     * O parâmetro delta contém o tempo que passou entre o quadro
+     * anterior e o quadro atual.
      */
     @Override
-    public void update() {
+    public void update( double delta ) {
     }
 
     /**

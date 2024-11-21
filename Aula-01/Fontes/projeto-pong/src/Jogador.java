@@ -1,4 +1,4 @@
-import br.com.davidbuzatto.jsge.core.Engine;
+import br.com.davidbuzatto.jsge.core.engine.EngineFrame;
 import java.awt.Color;
 
 public class Jogador {
@@ -17,7 +17,7 @@ public class Jogador {
         this.cor = cor;
     }
 
-    public void desenhar( Engine engine ) {
+    public void desenhar( EngineFrame engine ) {
         engine.fillRectangle( x, y, largura, altura, cor );
     }
 

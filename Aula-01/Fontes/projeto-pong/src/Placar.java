@@ -1,4 +1,4 @@
-import br.com.davidbuzatto.jsge.core.Engine;
+import br.com.davidbuzatto.jsge.core.engine.EngineFrame;
 import java.awt.Color;
 
 public class Placar {
@@ -19,7 +19,7 @@ public class Placar {
         this.cor = cor;
     }
 
-    public void desenhar( Engine engine ) {
+    public void desenhar( EngineFrame engine ) {
         String pontuacao = String.format( "%d | %d", pontosJogador1, pontosJogador2 );
         int largura = engine.measureText( pontuacao, 45 );
         engine.drawText( pontuacao, x - largura/2, y, 45, cor );

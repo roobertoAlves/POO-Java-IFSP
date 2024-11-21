@@ -1,6 +1,4 @@
-import java.util.Set;
-
-import br.com.davidbuzatto.jsge.core.Engine;
+import br.com.davidbuzatto.jsge.core.engine.EngineFrame;
 
 /**
  * Exemplo de tratamento de eventos do teclado.
@@ -8,11 +6,10 @@ import br.com.davidbuzatto.jsge.core.Engine;
  * @author Prof. Dr. David Buzatto
  * @copyright Copyright (c) 2024
  */
-public class Main extends Engine {
+public class Main extends EngineFrame {
 
     private char[] caracteres;
     private int quantidadeCaracteres;
-    private int ultimoCodigo;
 
     public Main() {
         super( 600, 400, "Exemplo de Tratamento do Teclado", 60, true );
@@ -25,7 +22,7 @@ public class Main extends Engine {
     }
 
     @Override
-    public void update() {
+    public void update( double delta ) {
 
         if ( isKeyPressed( KEY_SPACE ) ) {
             System.out.println( "tecla <espaco> pressionada!" );
@@ -35,35 +32,17 @@ public class Main extends Engine {
             System.out.println( "tecla <espaco> solta!" );
         }
 
-        Set<Integer> p = getKeyPressed();
-        if ( p.isEmpty() ) {
-            ultimoCodigo = 0;
-        } else {
-
-            int codigo = p.iterator().next();
-
-            if ( codigo != ultimoCodigo ) {
-
-                ultimoCodigo = codigo;
-
-                if ( codigo != 0 ) {
-                    System.out.printf( "codigo tecla pressionada: %d\n", codigo );
-                    if ( codigo == KEY_ENTER ) {
-                        caracteres[quantidadeCaracteres++] = '\n';
-                    }
-                }
-
-                char caractere = (char) codigo;
-
-                if ( caractere != '\0' ) {
-                    if ( quantidadeCaracteres < 100 ) {
-                        caracteres[quantidadeCaracteres++] = caractere;
-                    }
-                }
-
+        char c = getCharPressed();
+        if ( c != KEY_NULL ) {
+            if ( quantidadeCaracteres < 100 ) {
+                caracteres[quantidadeCaracteres++] = c;
             }
+        }
 
-        }                
+        int k = getKeyPressed();
+        if ( k != KEY_NULL ) {
+            System.out.printf( "codigo tecla pressionada: %d\n", k );
+        }
 
     }
 

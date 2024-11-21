@@ -1,6 +1,6 @@
 import java.awt.Color;
 
-import br.com.davidbuzatto.jsge.core.Engine;
+import br.com.davidbuzatto.jsge.core.engine.EngineFrame;
 
 public class Bolinha {
     
@@ -28,9 +28,9 @@ public class Bolinha {
         this.arrastando = false;
     }
 
-    public void desenhar( Engine engine ) {
+    public void desenhar( EngineFrame engine ) {
         engine.fillCircle( x, y, raio, cor );
-        engine.drawCircle( x, y, raio, Engine.BLACK );
+        engine.drawCircle( x, y, raio, EngineFrame.BLACK );
     }
 
     public double getX() {

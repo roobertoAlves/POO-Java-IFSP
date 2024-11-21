@@ -1,5 +1,5 @@
-import br.com.davidbuzatto.jsge.core.Engine;
-import br.com.davidbuzatto.jsge.geom.Point;
+import br.com.davidbuzatto.jsge.core.engine.EngineFrame;
+import br.com.davidbuzatto.jsge.math.Vector2;
 
 /**
  * Exemplo de tratamento de eventos do mouse.
@@ -7,11 +7,11 @@ import br.com.davidbuzatto.jsge.geom.Point;
  * @author Prof. Dr. David Buzatto
  * @copyright Copyright (c) 2024
  */
-public class Main extends Engine {
+public class Main extends EngineFrame {
 
     private class Linha {
-        Point ini = new Point();
-        Point fim = new Point();
+        Vector2 ini = new Vector2();
+        Vector2 fim = new Vector2();
         boolean desenhar;
     }
 
@@ -30,7 +30,7 @@ public class Main extends Engine {
     }
 
     @Override
-    public void update() {
+    public void update( double delta ) {
 
         // verifica se o botão da esquerda do mouse foi pressionado uma vez
         if ( isMouseButtonPressed( MOUSE_BUTTON_LEFT ) ) {
@@ -58,7 +58,7 @@ public class Main extends Engine {
             linhas[quantidadeLinhas++] = linhaTemporaria;
 
             // verifica se o botão da esquerda do mouse continua pressionado
-        } else if ( isMouseButtonDown(MOUSE_BUTTON_LEFT ) ) {
+        } else if ( isMouseButtonDown( MOUSE_BUTTON_LEFT ) ) {
 
             if ( linhaTemporaria != null ) {
 

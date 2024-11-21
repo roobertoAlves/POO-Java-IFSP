@@ -1,4 +1,4 @@
-import br.com.davidbuzatto.jsge.core.Engine;
+import br.com.davidbuzatto.jsge.core.engine.EngineFrame;
 
 /**
  * Jogo de ping-pong.
@@ -6,7 +6,7 @@ import br.com.davidbuzatto.jsge.core.Engine;
  * @author Prof. Dr. David Buzatto
  * @copyright Copyright (c) 2024
  */
-public class Main extends Engine {
+public class Main extends EngineFrame {
 
     private Bolinha bolinha;
     private Jogador jogador1;
@@ -28,7 +28,7 @@ public class Main extends Engine {
     }
 
     @Override
-    public void update() {
+    public void update( double delta ) {
         
         atualizarBolinha();
         atualizarJogador1();
