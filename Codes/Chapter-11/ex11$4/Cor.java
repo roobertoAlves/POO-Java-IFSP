@@ -6,44 +6,9 @@ public class Cor
     
     public Cor( int red, int green, int blue )
     {
-        if( red < 0 )
-        {
-            this.red = 0;
-        }
-        else if(red > 255)
-        {
-            this.red = 255;
-        }
-        else
-        {
-            this.red = red;
-        }
-
-        if( green < 0 )
-        {
-            this.green = 0;
-        }
-        else if(green > 255)
-        {
-            this.green = 255;
-        }
-        else
-        {
-            this.green = green;
-        }
-
-        if( blue < 0 )
-        {
-            this.blue = 0;
-        }
-        else if(blue > 255)
-        {
-            this.blue = 255;
-        }
-        else
-        {
-            this.blue = blue;
-        }
+        this.red = (red < 0) ? 0 : (red > 255) ? 255 : red;
+        this.green = (green < 0) ? 0 : (green > 255) ? 255 : green;
+        this.blue = (blue < 0) ? 0 : (blue > 255) ? 255 : blue;
     }
 
     @Override
