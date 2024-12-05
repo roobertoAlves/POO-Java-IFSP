@@ -1,17 +1,17 @@
-public class Cor 
+public class Color
 {
     private int red;
     private int green;
     private int blue;
 
-    public Cor( int red, int green, int blue )
+    public Color( int red, int green, int blue )
     {
         this.red = ( red < 0 ) ? 0 : ( red > 255 ) ? 255 : red;
         this.green = ( green < 0 ) ? 0 : ( green > 255 ) ? 255 : green; 
         this.blue = ( blue < 0 ) ? 0 : ( blue > 255 ) ? 255 : blue;
     }
     
-    public Cor lighten()
+    public Color lighten()
     {
         int newRed;
         int newGreen;
@@ -38,12 +38,12 @@ public class Cor
             lightBlue = 3;
         }
 
-        return new Cor( lightRed, lightGreen, lightBlue );
+        return new Color( lightRed, lightGreen, lightBlue );
     }
 
     public String toString()
     {
-        Cor lightCor = this.lighten();
+        Color lightCor = this.lighten();
 
         String stringToReturn = 
         """
@@ -54,4 +54,3 @@ public class Cor
         return String.format( stringToReturn, red, green, blue, lightCor.red, lightCor.green, lightCor.blue );
     }
 }
-
